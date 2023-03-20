@@ -3,11 +3,11 @@ class Error(Exception):
     pass
 
 
-class RateLimitHere(Error):
+class CustomZeroDivision(Error):
     def __init__(self, message):
         # Call the base class constructor with the parameters it needs
         super().__init__(message)
-        self.code = 503
+        self.code = 500
         self.message = message
 
     def __str__(self):
