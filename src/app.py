@@ -17,6 +17,9 @@ def addition():
     try:
       c = divide(100, 0)
     except CustomZeroDivision as cs:
+        print(cs)
+        print(cs.code)
+        print(cs.message)
         abort(503)
 
     return str(c)
